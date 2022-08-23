@@ -51,6 +51,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  background: #111;
 }
 ol, ul {
 	list-style: none;
@@ -81,9 +82,9 @@ h6 {
 }
 
 .grid-container {
-  margin: 0 80px;
+  margin: 80px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   column-gap: 1.25rem;
   row-gap: 2rem;
 }
@@ -92,7 +93,6 @@ h6 {
   display: grid;
   width: 100%;
   aspect-ratio: 1;
-  background-color: yellowgreen;
   justify-content: center;
   align-content: center;
   border-radius: 1rem;
@@ -102,6 +102,11 @@ h6 {
 .card p {
   font-size: 1rem;
   line-height: 1.2rem;
+}
+
+.label-1 {
+  color: #ddd;
+  font-weight: 900;
 }
 
 .label-2 {
@@ -120,7 +125,18 @@ h6 {
 
   .grid-container {
     margin: 0 60px;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .grid-container {
+    margin: 0 40px;
+    column-gap: 1rem;
+  }
+
+  .thumbnail {
+    border-radius: 0.75rem;
   }
 }
 
@@ -128,6 +144,15 @@ h6 {
   .grid-container {
     margin: 0 30px;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    column-gap: 0.875rem;
+    column-gap: 0.75rem;
+  }
+
+  .card p {
+    font-size: 0.75rem;
+    line-height: 0.825rem;
+  }
+
+  .thumbnail {
+    border-radius: 0.5rem;
   }
 }
