@@ -8,7 +8,7 @@ const createCards = (qty) => {
 
     const thumbnail = document.createElement('div');
     thumbnail.classList.add('thumbnail');
-    thumbnail.style.backgroundImage = `url("https://source.unsplash.com/featured/300x300/?model&${i}")`;
+    thumbnail.style.backgroundImage = `url("https://source.unsplash.com/featured/300x300/?cat&${i}")`;
 
     const labelOne = document.createElement('p');
     labelOne.classList.add('label-1');

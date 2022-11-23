@@ -46,12 +46,11 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer, hgroup, menu, nav, section {
 	display: block;
 }
 body {
 	line-height: 1;
-  background: #111;
 }
 ol, ul {
 	list-style: none;
@@ -81,23 +80,56 @@ h6 {
   line-height: 1.4rem;
 }
 
-body {
-  display: flex;
+:root {
+  --background-color: #190949;
+  --background-gradient: linear-gradient(var(--background-color), #09031A);
 }
 
-navbar {
-  width: 100px;
-  height: 100vh;
-  background: #1c1c1c;
-  background: yellowgreen;
+body {
+  display: flex;
+  background: var(--background-gradient);
+}
+
+.gradient-blur {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 200px;
+  -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  -webkit-mask-image: linear-gradient(var(--background-color) 40%, transparent);
+  mask-image: linear-gradient(var(--background-color) 40%, transparent);
+}
+
+.top-mask {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 300px;
+  background: var(--background-color);
+  -webkit-mask-image: linear-gradient(var(--background-color) 10%, transparent);
+  mask-image: linear-gradient(var(--background-color) 10%, transparent);
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 100;
+  color: #fafafa;
 }
 
 .grid-container {
-  padding: 80px;
+  padding: 200px 80px 80px 80px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-  column-gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 1.5rem;
   row-gap: 2rem;
 }
 
@@ -112,8 +144,8 @@ navbar {
 }
 
 .card p {
-  font-size: 0.875rem;
-  line-height: 1.2rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
 }
 
 .label-1 {
